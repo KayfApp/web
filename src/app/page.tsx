@@ -42,7 +42,11 @@ export default function Home() {
        </div>
       <div className="flex justify-end px-6 py-6">
       <div className="hidden lg:flex">
-      <Button className="text-black text-xl bg-white hover:bg-stone-300"><Star className="mr-1" />Star</Button>
+      <Link href="https://github.com/KayfApp">
+      <Button className="text-black text-xl bg-white hover:bg-stone-300">
+        <Star className="mr-1" />Star
+      </Button>
+      </Link>
       </div>
       <Sheet>
         <SheetTrigger asChild>
@@ -68,7 +72,9 @@ export default function Home() {
             <Link href="#" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
               Blog
             </Link>
+            <Link href="https://github.com/KayfApp">
             <Button className="mt-4 w-2/3 text-black text-lg bg-white hover:bg-stone-300"><Star className="mr-1" />Star</Button>
+            </Link>
           </div>
         </SheetContent>
       </Sheet>
