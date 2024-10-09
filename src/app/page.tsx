@@ -5,7 +5,7 @@ import { JSX, SVGProps } from "react"
 import { ArrowRight } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
-import { FileText, Search, Copy } from 'lucide-react';
+import { FileText, Search, Copy, Star } from 'lucide-react';
 import Image from "next/image";
 import myImage from "./images/Workbase.png";
 import tracer from "./images/Tracer.png";
@@ -14,7 +14,7 @@ import workflows from "./images/Editor.png";
 export default function Home() {
   return (
     <div className="min-h-screen h-[100%] bg-gradient-to-b from-gradient-start from-30% to-gradient-end to-70% ">
-    <div className="grid grid-cols-3">
+    <div className="fixed w-full grid grid-cols-3 bg-[#0a0a0a] border-2 border-transparent border-b-zinc-800">
     <div className="flex items-center justify-start px-4 py-6">
       <Link href="#" className="flex items-center gap-2" prefetch={false}>
         <MountainIcon className="h-6 w-6" />
@@ -39,58 +39,64 @@ export default function Home() {
           Blog
         </Link>
        </div> 
+       </div>
+      <div className="flex justify-end px-6 py-6">
+      <div className="hidden lg:flex">
+      <Button className="text-black text-xl bg-white hover:bg-stone-300"><Star className="mr-1" />Star</Button>
+      </div>
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="outline" size="icon" className="lg:hidden">
+          <Button variant="outline" size="icon" className="felx justify-items-end lg:hidden bg-transparent">
             <MenuIcon className="h-6 w-6" />
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="left">
+        <SheetContent side="left" className="bg-[#0a0a0a] w-[200px] border-[#083344]">
           <div className="grid w-[200px] p-4">
             <Link href="#" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
-              Home
+              Product
             </Link>
             <Link href="#" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
-              About
+              Download
             </Link>
             <Link href="#" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
-              Services
+              Pricing
             </Link>
             <Link href="#" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
-              Portfolio
+              Team
             </Link>
             <Link href="#" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
-              Contact
+              Blog
             </Link>
+            <Button className="mt-4 w-2/3 text-black text-lg bg-white hover:bg-stone-300"><Star className="mr-1" />Star</Button>
           </div>
         </SheetContent>
       </Sheet>
+      </div>
     </div>
-    </div>
-    <h1 className="text-center justify-center text-8xl px-60 py-20"> <span className="font-bold">Track</span>,  
+    <h1 className="text-center justify-center text-3xl md:text-8xl md:px-60 pt-[150px] pb-14"> <span className="font-bold">Track</span>,  
     <span className="font-bold">Access</span>, and  <span className="font-bold">Process</span>
     , all your data <span className="text-blue-200"> on one platform</span></h1>
-    <h1 className="text-center justify-center text-4xl px-96">Open-Source Automation & Data Centralization Platform
+    <h1 className="text-center justify-center text-xl md:text-4xl md:px-96">Open-Source Automation & Data Centralization Platform
     Scalability is more than a buzzword to us</h1>
     <div className="flex justify-center py-14">
-    <Button className="relative w-2/12 h-14 text-3xl bg-transparent border-none bg-gradient-to-r from-purple-500 to-blue-500 p-[2px] rounded-lg">
+    <Button className="md:w-2/12 h-14 text-3xl bg-transparent border-none bg-gradient-to-r from-purple-500 to-blue-500 p-[2px] rounded-lg">
     <div className="flex items-center justify-center h-full w-full text-white rounded-md bg-cyan-950">
       Get Kayf App <ArrowRight className="ml-4" />
     </div>
     </Button>
     </div>
     <div className="flex justify-center py-14">
-    <Tabs defaultValue="account">
-      <TabsList className="bg-transparent gap-24">
-        <TabsTrigger value="editor" className="text-6xl"><FileText className="w-[60px] h-[60px]" />Editor</TabsTrigger>
-        <TabsTrigger value="tracer" className="text-6xl"><Search className="w-[60px] h-[60px]" />Tracer</TabsTrigger>
-        <TabsTrigger value="workflows" className="text-6xl"><Copy className="w-[60px] h-[60px]" />Workflows</TabsTrigger>
+    <Tabs defaultValue="tracer">
+      <TabsList className="felx justify-center bg-transparent md:gap-24">
+        <TabsTrigger value="editor" className="md:text-6xl"><FileText className="md:w-[60px] h-[60px]" />Editor</TabsTrigger>
+        <TabsTrigger value="tracer" className="md:text-6xl"><Search className="md:w-[60px] h-[60px]" />Tracer</TabsTrigger>
+        <TabsTrigger value="workflows" className="md:text-6xl"><Copy className="md:w-[60px] h-[60px]" />Workflows</TabsTrigger>
       </TabsList>
-      <Separator className="bg-sky-500 opacity-25 h-[5px] mt-3" />
-      <TabsContent value="editor" className="flex justify-center"><Image src={myImage} alt="Editor vorschau" width={980}/></TabsContent>
-      <TabsContent value="tracer" className="flex justify-center"><Image src={tracer} alt="Tracer vorschau" width={980}/></TabsContent>
-      <TabsContent value="workflows" className="flex justify-center"><Image src={workflows} alt="Tracer vorschau" width={980}/></TabsContent>
+      <Separator className="bg-sky-500 opacity-25 md:h-[8px] md:mt-4" />
+      <TabsContent value="editor" className="flex justify-center"><Image src={myImage} alt="Editor vorschau" className="w-[300px] md:w-[980px]"/></TabsContent>
+      <TabsContent value="tracer" className="flex justify-center"><Image src={tracer} alt="Tracer vorschau" className="w-[300px] md:w-[980px]"/></TabsContent>
+      <TabsContent value="workflows" className="flex justify-center"><Image src={workflows} alt="Tracer vorschau" className="w-[300px] md:w-[980px]"/></TabsContent>
     </Tabs>
     </div>
     </div>
