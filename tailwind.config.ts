@@ -11,7 +11,7 @@ const config: Config = {
   	extend: {
   		colors: {
   			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
+  			foreground: 'hsl(0,50%, 100%)',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -49,7 +49,9 @@ const config: Config = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+			'gradient-start': '#0a0a0a', // slate-950
+        	'gradient-end': '#083344', 
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
