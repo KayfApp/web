@@ -83,7 +83,7 @@ export default function Home() {
     <h1 className="text-center justify-center text-3xl md:text-8xl md:px-60 pt-[150px] pb-14"> <span className="font-bold">Track</span>,  
     <span className="font-bold">Access</span>, and  <span className="font-bold">Process</span>
     , all your data <span className="text-blue-200"> on one platform</span></h1>
-    <h1 className="text-center justify-center text-xl md:text-4xl md:px-96">Open-Source Automation & Data Centralization Platform
+    <h1 className="text-center justify-center text-xl md:text-3xl md:px-96">Open-Source Automation & Data Centralization Platform
     Scalability is more than a buzzword to us</h1>
     <div className="flex justify-center py-14">
     <Button className="md:w-2/12 h-14 text-3xl bg-transparent border-none bg-gradient-to-r from-purple-500 to-blue-500 p-[2px] rounded-lg">
@@ -93,11 +93,11 @@ export default function Home() {
     </Button>
     </div>
     <div className="flex justify-center py-14">
-    <Tabs defaultValue="tracer">
-      <TabsList className="felx justify-center bg-transparent md:gap-24">
-        <TabsTrigger value="editor" className="md:text-6xl"><FileText className="md:w-[60px] h-[60px]" />Editor</TabsTrigger>
-        <TabsTrigger value="tracer" className="md:text-6xl"><Search className="md:w-[60px] h-[60px]" />Tracer</TabsTrigger>
-        <TabsTrigger value="workflows" className="md:text-6xl"><Copy className="md:w-[60px] h-[60px]" />Workflows</TabsTrigger>
+    <Tabs defaultValue="tracer" className="felx justify-center">
+      <TabsList className="bg-transparent md:gap-48">
+        <TabsTrigger value="editor" className="md:text-4xl"><FileText className="md:w-[40px] h-[40px]" />Editor</TabsTrigger>
+        <TabsTrigger value="tracer" className="md:text-4xl"><Search className="md:w-[40px] h-[40px]" />Tracer</TabsTrigger>
+        <TabsTrigger value="workflows" className="md:text-4xl"><Copy className="md:w-[40px] h-[40px]" />Workflows</TabsTrigger>
       </TabsList>
       <Separator className="bg-sky-500 opacity-25 md:h-[8px] md:mt-4" />
       <TabsContent value="editor" className="flex justify-center"><Image src={myImage} alt="Editor vorschau" className="w-[300px] md:w-[980px]"/></TabsContent>
