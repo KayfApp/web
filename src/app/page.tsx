@@ -1,14 +1,19 @@
-import Link from "next/link"
+import Link from "next/link";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { JSX, SVGProps } from "react"
 import { ArrowRight } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
+import { FileText, Search, Copy } from 'lucide-react';
+import Image from "next/image";
+import myImage from "./images/Workbase.png";
+import tracer from "./images/Tracer.png";
+import workflows from "./images/Editor.png";
 
 export default function Home() {
   return (
-    <div className="h-screen bg-gradient-to-b from-gradient-start from-30% to-gradient-end to-70% ">
+    <div className="min-h-screen h-[100%] bg-gradient-to-b from-gradient-start from-30% to-gradient-end to-70% ">
     <div className="grid grid-cols-3">
     <div className="flex items-center justify-start px-4 py-6">
       <Link href="#" className="flex items-center gap-2" prefetch={false}>
@@ -78,14 +83,14 @@ export default function Home() {
     <div className="flex justify-center py-14">
     <Tabs defaultValue="account">
       <TabsList className="bg-transparent gap-24">
-        <TabsTrigger value="editor" className="text-6xl">Editor</TabsTrigger>
-        <TabsTrigger value="tracer" className="text-6xl">Tracer</TabsTrigger>
-        <TabsTrigger value="workflows" className="text-6xl">Workflows</TabsTrigger>
+        <TabsTrigger value="editor" className="text-6xl"><FileText className="w-[60px] h-[60px]" />Editor</TabsTrigger>
+        <TabsTrigger value="tracer" className="text-6xl"><Search className="w-[60px] h-[60px]" />Tracer</TabsTrigger>
+        <TabsTrigger value="workflows" className="text-6xl"><Copy className="w-[60px] h-[60px]" />Workflows</TabsTrigger>
       </TabsList>
-      <Separator className="bg-sky-500 h-[2px] mt-4" />
-      <TabsContent value="editor">Make changes to your.</TabsContent>
-      <TabsContent value="tracer">Change your password here.</TabsContent>
-      <TabsContent value="workflows">Change your password here.</TabsContent>
+      <Separator className="bg-sky-500 opacity-25 h-[5px] mt-3" />
+      <TabsContent value="editor" className="flex justify-center"><Image src={myImage} alt="Editor vorschau" width={980}/></TabsContent>
+      <TabsContent value="tracer" className="flex justify-center"><Image src={tracer} alt="Tracer vorschau" width={980}/></TabsContent>
+      <TabsContent value="workflows" className="flex justify-center"><Image src={workflows} alt="Tracer vorschau" width={980}/></TabsContent>
     </Tabs>
     </div>
     </div>
