@@ -86,23 +86,21 @@ export default function Home() {
     <h1 className="text-center justify-center text-xl md:text-3xl md:px-96">Open-Source Automation & Data Centralization Platform
     Scalability is more than a buzzword to us</h1>
     <div className="flex justify-center py-14">
-    <Button className="md:w-2/12 h-14 text-3xl bg-transparent border-none bg-gradient-to-r from-purple-500 to-blue-500 p-[2px] rounded-lg">
-    <div className="flex items-center justify-center h-full w-full text-white rounded-md bg-cyan-950">
+    <Button className="md:w-2/12 h-14 text-3xl bg-transparent border-4 border-cyan-950 p-[2px] rounded-lg hover:bg-cyan-950 px-4 md:px-0">
       Get Kayf App <ArrowRight className="ml-4" />
-    </div>
     </Button>
     </div>
     <div className="flex justify-center py-14">
     <Tabs defaultValue="tracer" className="felx justify-center">
       <TabsList className="bg-transparent md:gap-48">
-        <TabsTrigger value="editor" className="md:text-4xl"><FileText className="md:w-[40px] h-[40px]" />Editor</TabsTrigger>
-        <TabsTrigger value="tracer" className="md:text-4xl"><Search className="md:w-[40px] h-[40px]" />Tracer</TabsTrigger>
-        <TabsTrigger value="workflows" className="md:text-4xl"><Copy className="md:w-[40px] h-[40px]" />Workflows</TabsTrigger>
+        <TabsTrigger value="editor" className="md:text-4xl"><FileText className="md:w-[40px] h-[40px] mr-1 md:mr-2" />Editor</TabsTrigger>
+        <TabsTrigger value="tracer" className="md:text-4xl"><Search className="md:w-[40px] h-[40px] mr-1 md:mr-2" />Tracer</TabsTrigger>
+        <TabsTrigger value="workflows" className="md:text-4xl"><Copy className="md:w-[40px] h-[40px] mr-1 md:mr-2" />Workflows</TabsTrigger>
       </TabsList>
-      <Separator className="bg-sky-500 opacity-25 md:h-[8px] md:mt-4" />
-      <TabsContent value="editor" className="flex justify-center"><Image src={myImage} alt="Editor vorschau" className="w-[300px] md:w-[980px]"/></TabsContent>
-      <TabsContent value="tracer" className="flex justify-center"><Image src={tracer} alt="Tracer vorschau" className="w-[300px] md:w-[980px]"/></TabsContent>
-      <TabsContent value="workflows" className="flex justify-center"><Image src={workflows} alt="Tracer vorschau" className="w-[300px] md:w-[980px]"/></TabsContent>
+      <Separator className="ml-5 bg-sky-500 opacity-25 md:h-[5px] md:mt-4 w-[89%] md:w-[96.5%]" />
+      <TabsContent value="editor" className="flex justify-center"><Image src={myImage} alt="Editor vorschau" className="w-[300px] md:w-[900px]"/></TabsContent>
+      <TabsContent value="tracer" className="flex justify-center"><Image src={tracer} alt="Tracer vorschau" className="w-[300px] md:w-[900px]"/></TabsContent>
+      <TabsContent value="workflows" className="flex justify-center"><Image src={workflows} alt="Tracer vorschau" className="w-[300px] md:w-[900px]"/></TabsContent>
     </Tabs>
     </div>
     </div>
