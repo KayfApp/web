@@ -6,104 +6,31 @@ import { ArrowRight } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
 import { FileText, Search, Copy, Star } from 'lucide-react';
-import Image from "next/image";
-import myImage from "./images/Workbase.png";
-import tracer from "./images/Tracer.png";
-import workflows from "./images/Editor.png";
 
 export default function Home() {
   return (
-    <div className="min-h-screen h-[100%] bg-gradient-to-b from-gradient-start from-30% to-gradient-end to-70% ">
-    <div className="fixed w-full grid grid-cols-3 bg-[#0a0a0a] border-2 border-transparent border-b-zinc-800">
-    <div className="flex items-center justify-start px-4 py-6">
-      <Link href="#" className="flex items-center gap-2" prefetch={false}>
-        <MountainIcon className="h-6 w-6" />
-        <span className="text-4xl font-semibold">Kayf</span>
-      </Link>
-    </div>
-    <div className="flex items-center justify-center px-4 py-2">
-      <div className="col-start-2 col-span-3 hidden md:flex gap-4">
-        <Link href="#" className="text-2xl font-medium hover:underline underline-offset-4" prefetch={false}>
-          Product
-        </Link>
-        <Link href="#" className="text-2xl font-medium hover:underline underline-offset-4" prefetch={false}>
-          Download
-        </Link>
-        <Link href="#" className="text-2xl font-medium hover:underline underline-offset-4" prefetch={false}>
-          Pricing
-        </Link>
-        <Link href="#" className="text-2xl font-medium hover:underline underline-offset-4" prefetch={false}>
-          Team
-        </Link>
-        <Link href="#" className="text-2xl font-medium hover:underline underline-offset-4" prefetch={false}>
-          Blog
-        </Link>
-       </div> 
-       </div>
-      <div className="flex justify-end px-6 py-6">
-      <div className="hidden lg:flex">
-      <Link href="https://github.com/KayfApp">
-      <Button className="text-black text-xl bg-white hover:bg-stone-300">
-        <Star className="mr-1" />Star
-      </Button>
-      </Link>
+    <main className="min-h-screen h-[100%] bg-gradient-to-b from-gradient-start from-30% to-gradient-end to-70% ">
+      <h1 className="text-center justify-center text-3xl md:text-8xl md:px-60 pt-40 pb-14"> <span className="font-bold">Track</span>,
+        <span className="font-bold">Access</span>, and  <span className="font-bold">Process</span>
+        , all your data <span className="text-blue-200"> on one platform</span></h1>
+      <h1 className="text-center justify-center text-xl md:text-3xl md:px-96">Open-Source Automation & Data Centralization Platform
+        Scalability is more than a buzzword to us</h1>
+      <div className="flex justify-center py-14">
+        <Button className="md:w-2/12 h-14 text-3xl bg-transparent border-4 border-cyan-950 p-[2px] rounded-lg hover:bg-cyan-950 px-4 md:px-0">
+          Get Kayf App <ArrowRight className="ml-4" />
+        </Button>
       </div>
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button variant="outline" size="icon" className="felx justify-items-end lg:hidden bg-transparent">
-            <MenuIcon className="h-6 w-6" />
-            <span className="sr-only">Toggle navigation menu</span>
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="left" className="bg-[#0a0a0a] w-[200px] border-[#083344]">
-          <div className="grid w-[200px] p-4">
-            <Link href="#" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
-              Product
-            </Link>
-            <Link href="#" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
-              Download
-            </Link>
-            <Link href="#" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
-              Pricing
-            </Link>
-            <Link href="#" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
-              Team
-            </Link>
-            <Link href="#" className="text-lg font-medium hover:underline underline-offset-4" prefetch={false}>
-              Blog
-            </Link>
-            <Link href="https://github.com/KayfApp">
-            <Button className="mt-4 w-2/3 text-black text-lg bg-white hover:bg-stone-300"><Star className="mr-1" />Star</Button>
-            </Link>
-          </div>
-        </SheetContent>
-      </Sheet>
+      <div className="flex justify-center py-14">
+        <Tabs defaultValue="tracer" className="felx justify-center">
+          <TabsList className="bg-transparent md:gap-48">
+            <TabsTrigger value="editor" className="md:text-4xl"><FileText className="md:w-[40px] h-[40px] mr-1 md:mr-2" />Editor</TabsTrigger>
+            <TabsTrigger value="tracer" className="md:text-4xl"><Search className="md:w-[40px] h-[40px] mr-1 md:mr-2" />Tracer</TabsTrigger>
+            <TabsTrigger value="workflows" className="md:text-4xl"><Copy className="md:w-[40px] h-[40px] mr-1 md:mr-2" />Workflows</TabsTrigger>
+          </TabsList>
+          <Separator className="ml-5 bg-sky-500 opacity-25 md:h-[5px] md:mt-4 w-[89%] md:w-[96.5%]" />
+        </Tabs>
       </div>
-    </div>
-    <h1 className="text-center justify-center text-3xl md:text-8xl md:px-60 pt-[150px] pb-14"> <span className="font-bold">Track</span>,  
-    <span className="font-bold">Access</span>, and  <span className="font-bold">Process</span>
-    , all your data <span className="text-blue-200"> on one platform</span></h1>
-    <h1 className="text-center justify-center text-xl md:text-3xl md:px-96">Open-Source Automation & Data Centralization Platform
-    Scalability is more than a buzzword to us</h1>
-    <div className="flex justify-center py-14">
-    <Button className="md:w-2/12 h-14 text-3xl bg-transparent border-4 border-cyan-950 p-[2px] rounded-lg hover:bg-cyan-950 px-4 md:px-0">
-      Get Kayf App <ArrowRight className="ml-4" />
-    </Button>
-    </div>
-    <div className="flex justify-center py-14">
-    <Tabs defaultValue="tracer" className="felx justify-center">
-      <TabsList className="bg-transparent md:gap-48">
-        <TabsTrigger value="editor" className="md:text-4xl"><FileText className="md:w-[40px] h-[40px] mr-1 md:mr-2" />Editor</TabsTrigger>
-        <TabsTrigger value="tracer" className="md:text-4xl"><Search className="md:w-[40px] h-[40px] mr-1 md:mr-2" />Tracer</TabsTrigger>
-        <TabsTrigger value="workflows" className="md:text-4xl"><Copy className="md:w-[40px] h-[40px] mr-1 md:mr-2" />Workflows</TabsTrigger>
-      </TabsList>
-      <Separator className="ml-5 bg-sky-500 opacity-25 md:h-[5px] md:mt-4 w-[89%] md:w-[96.5%]" />
-      <TabsContent value="editor" className="flex justify-center"><Image src={myImage} alt="Editor vorschau" className="w-[300px] md:w-[900px]"/></TabsContent>
-      <TabsContent value="tracer" className="flex justify-center"><Image src={tracer} alt="Tracer vorschau" className="w-[300px] md:w-[900px]"/></TabsContent>
-      <TabsContent value="workflows" className="flex justify-center"><Image src={workflows} alt="Tracer vorschau" className="w-[300px] md:w-[900px]"/></TabsContent>
-    </Tabs>
-    </div>
-    </div>
+    </main>
   )
 }
 
