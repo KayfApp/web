@@ -1,14 +1,25 @@
 "use client"
 import { MenuIcon, Star } from "lucide-react";
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import Image from "next/image";
 import logo from "@/../public/logo.svg"
 
+export function LinkHoverAnim({ children, className = '', ...props }: LinkProps & { children: React.ReactNode, className?: string }) {
+  return (
+    <Link
+      className={`relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-300 after:origin-center ${className}`}
+      {...props}
+    >
+      {children}
+    </Link>
+  );
+}
+
 export default function Header() {
   return (
-    <div className="fixed w-full flex flex-row grow border-b-2 px-6 py-4">
+    <div className="fixed w-full flex flex-row grow border-b-2 px-6 py-4 backdrop-blur-sm">
       <div className="flex justify-start">
         <Link href="#" className="flex items-center" prefetch={false}>
           <Image src={logo} alt="Logo" height={40} className="absolute invert" />
@@ -19,9 +30,9 @@ export default function Header() {
         <div className="hidden lg:flex space-x-8">
           {
             ['Product', 'Download', 'Pricing', 'Team', 'Blog'].map((e, i) => (
-              <Link href="#" key={`navigation-item-${i}`} className="text-2xl font-medium hover:underline underline-offset-4" prefetch={false}>
+              <LinkHoverAnim href="#" key={`navigation-item-${i}`} className="text-2xl" prefetch={false}>
                 {e}
-              </Link>
+              </LinkHoverAnim>
             ))
           }
         </div>
