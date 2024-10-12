@@ -20,7 +20,7 @@ export function LinkHoverAnim({ children, className = '', ...props }: LinkProps 
 
 export default function Header() {
   return (
-    <div className="fixed w-full flex flex-row grow border-b-2 px-6 py-4 backdrop-blur-sm bg-primary-foreground/25">
+    <div className="fixed w-full flex flex-row grow border-b-2 px-6 py-4 backdrop-blur-sm bg-black/90">
       <div className="flex justify-start">
         <Link href="#" className="flex items-center" prefetch={false}>
           <Image src={logo} alt="Logo" height={40} className="absolute invert" />
