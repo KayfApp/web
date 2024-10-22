@@ -18,28 +18,24 @@ export default function Pricing() {
                                 <CardDescription>For individuals up to 2 members to organize everything</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <span>  
+                                <span>
                                     <h1 className="text-5xl pb-8">$0</h1>
                                 </span>
                                 <span className="flex justify-center">
-                                    <Button className="w-full h-[60px] border text-3xl bg-blue-300">Get started</Button>
+                                    <Button className="w-full h-[60px] border text-3xl bg-blue-300 hover:bg-blue-200">Get started</Button>
                                 </span>
 
                                 <span className="grid grid-cols-6 pt-8 gap-4">
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
                                 </span>
                             </CardContent>
-
-                            <CardFooter>
-
-                            </CardFooter>
                         </Card>
                     </span>
                     <span>
@@ -53,23 +49,19 @@ export default function Pricing() {
                                     <h1 className="text-5xl pb-8">$10</h1>
                                 </span>
                                 <span className="flex justify-center">
-                                    <Button className="w-full h-[60px] border text-3xl bg-blue-300">Get started</Button>
+                                    <Button className="w-full h-[60px] border text-3xl bg-blue-300 hover:bg-blue-200">Get started</Button>
                                 </span>
                                 <span className="grid grid-cols-6 pt-8 gap-4">
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
                                 </span>
                             </CardContent>
-
-                            <CardFooter>
-
-                            </CardFooter>
                         </Card>
                     </span>
                     <span>
@@ -83,23 +75,19 @@ export default function Pricing() {
                                     <h1 className="text-5xl pb-8">Contact Sales</h1>
                                 </span>
                                 <span className="flex justify-center">
-                                    <Button className="w-full h-[60px] border text-3xl bg-blue-300">Get started</Button>
+                                    <Button className="w-full h-[60px] border text-3xl bg-blue-300 hover:bg-blue-200">Get started</Button>
                                 </span>
                                 <span className="grid grid-cols-6 pt-8 gap-4">
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300"/></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
                                 </span>
                             </CardContent>
-
-                            <CardFooter>
-
-                            </CardFooter>
                         </Card>
                     </span>
                 </span>
