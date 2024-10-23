@@ -2,6 +2,17 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import React from "react"
 import { Button } from "@/components/ui/button"
 import { Check } from 'lucide-react';
+
+type Prices = { abo: string, description: string, price: string, features: string }
+
+const prices: Prices[] = [
+    { abo: 'Free', description: 'For individuals up to 2 members to organize everything', price: '$0', features: '1 collaborative workspace up to 2 members' },
+    { abo: 'Pro', description: 'For small teams to manage projects and team knowledge', price: '$10', features: '1 collaborative workspace up to 2 members' },
+    { abo: 'Exklusive', description: 'For large teams to manage big projects and team knowledge', price: 'Contact Sales', features: '1 collaborative workspace up to 2 members' },
+]
+
+const feature = Array(7).fill(null);
+
 export default function Pricing() {
     return (
         <main className="w-full text-center min-h-screen bg-gradient-to-b bg-fixed from-gradient-start to-gradient-end space-y-16">
@@ -11,88 +22,29 @@ export default function Pricing() {
                     <span className="text-blue-300">Start Free.</span>
                 </h1>
                 <span className="flex justify-center grid grid-rows-1 md:grid-cols-3 gap-12 md:gap-32">
-                    <span>
-                        <Card className="bg-cyan-950 bg-opacity-30 text-left">
+                    {prices.map((p, index) => (
+                        <Card key={index} className="bg-cyan-950 bg-opacity-30 text-left">
                             <CardHeader>
-                                <CardTitle className="text-4xl">Free</CardTitle>
-                                <CardDescription>For individuals up to 2 members to organize everything</CardDescription>
+                                <CardTitle className="text-4xl">{p.abo}</CardTitle>
+                                <CardDescription>{p.description}</CardDescription>
                             </CardHeader>
                             <CardContent>
                                 <span>
-                                    <h1 className="text-5xl pb-8">$0</h1>
-                                </span>
-                                <span className="flex justify-center">
-                                    <Button className="w-full h-[60px] border text-3xl bg-blue-300 hover:bg-blue-200">Get started</Button>
-                                </span>
-
-                                <span className="grid grid-cols-6 pt-8 gap-4">
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                </span>
-                            </CardContent>
-                        </Card>
-                    </span>
-                    <span>
-                        <Card className="bg-cyan-950 bg-opacity-30 text-left">
-                            <CardHeader>
-                                <CardTitle className="text-4xl">Pro</CardTitle>
-                                <CardDescription>For small teams to manage projects and team knowledge</CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <span>
-                                    <h1 className="text-5xl pb-8">$10</h1>
+                                    <h1 className="text-5xl pb-8">{p.price}</h1>
                                 </span>
                                 <span className="flex justify-center">
                                     <Button className="w-full h-[60px] border text-3xl bg-blue-300 hover:bg-blue-200">Get started</Button>
                                 </span>
                                 <span className="grid grid-cols-6 pt-8 gap-4">
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
+                                    {feature.map((_, index) => (
+                                        <><span key={index}><Check className="text-blue-300" /></span><span className="col-span-5">{p.features}</span></>
+                                    ))}
                                 </span>
                             </CardContent>
                         </Card>
-                    </span>
-                    <span>
-                        <Card className="bg-cyan-950 bg-opacity-30 text-left">
-                            <CardHeader>
-                                <CardTitle className="text-4xl">Exklusive</CardTitle>
-                                <CardDescription>For large teams to manage big projects and team knowledge</CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <span>
-                                    <h1 className="text-5xl pb-8">Contact Sales</h1>
-                                </span>
-                                <span className="flex justify-center">
-                                    <Button className="w-full h-[60px] border text-3xl bg-blue-300 hover:bg-blue-200">Get started</Button>
-                                </span>
-                                <span className="grid grid-cols-6 pt-8 gap-4">
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                    <span><Check className="text-blue-300" /></span><span className="col-span-5">1 collaborative workspace up to 2 members</span>
-                                </span>
-                            </CardContent>
-                        </Card>
-                    </span>
+                    ))}
                 </span>
             </section>
         </main>
-
     )
 }
