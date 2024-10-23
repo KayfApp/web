@@ -51,7 +51,8 @@ const config: Config = {
   				'5': 'hsl(var(--chart-5))'
   			},
   			'gradient-start': '#000000',
-  			'gradient-end': '#001727'
+  			'gradient-end': '#001727',
+			transparent: 'transparent',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

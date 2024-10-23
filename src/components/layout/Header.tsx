@@ -5,7 +5,6 @@ import { Sheet, SheetClose, SheetContent, SheetDescription, SheetHeader, SheetTi
 import Image from "next/image";
 import logo from "@/../public/logo.svg"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-import Pricin from "@/app/dashboard/pricing/page";
 
 export function LinkHoverAnim({ children, className = '', ...props }: LinkProps & { children: React.ReactNode, className?: string }) {
 
@@ -64,10 +63,12 @@ export default function Header() {
           </SheetTrigger>
           <SheetContent side="top">
             <SheetHeader className="flex flex-row justify-content-center">
+              <Link href="/">
               <Image src={logo} alt="Logo" height={40} className="absolute invert" />
               <SheetTitle className="text-3xl pl-14 text-left font-normal">
                 Kayf
               </SheetTitle>
+              </Link>
               <VisuallyHidden>
                 <SheetDescription>
                   Navigation Menu
@@ -76,9 +77,15 @@ export default function Header() {
             </SheetHeader>
             <div className="flex flex-col space-y-4 mt-4">
               {
-                ['Product', 'Download', 'Pricing', 'Team', 'Blog'].map((e, i) => (
-                  <LinkHoverAnim href="#" key={`navigation-mobile-item-${i}`} className="text-2xl" prefetch={false}>
-                    {e}
+                [
+                  { label: 'Product', href: '/dashboard/product' },
+                  { label: 'Download', href: '/dashboard/download' },
+                  { label: 'Pricing', href: '/dashboard/pricing' },
+                  { label: 'Team', href: '/dashboard/team' },
+                  { label: 'Blog', href: '/dashboard/blog' }
+                ].map((item, i) => (
+                  <LinkHoverAnim href={item.href} key={`navigation-mobile-item-${i}`} className="text-2xl" prefetch={false}>
+                    {item.label}
                   </LinkHoverAnim>
                 ))
               }
