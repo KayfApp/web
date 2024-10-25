@@ -82,7 +82,7 @@ function ListItem({ className, title, children, ...props }: LinkProps & { childr
 export default function Header() {
     const { resolvedTheme } = useTheme()
     return (
-        <div className="flex grow flex-col fixed w-screen p-6 backdrop-blur-md self-center z-[2] items-center">
+        <div className="flex grow flex-col fixed w-screen py-6 backdrop-blur-md self-center z-[2] items-center">
             <div className="flex grow flex-col w-4/5">
                 <div className="flex justify-between items-center">
                     <div className="flex justify-start">

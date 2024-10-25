@@ -9,7 +9,6 @@ import tobiasAvatar from "@/../public/about/Tobias.jpg"
 import { Heading1, Paragraph } from "@/components/ui/typography"
 import Section from "@/components/layout/layout"
 import Link from "next/link"
-import { useTheme } from "next-themes"
 
 interface TeamProps {
     name: string;
@@ -46,7 +45,7 @@ const teamList: TeamProps[] = [
     {
         name: "Tobias Fischinger",
         position: "Scalability & Infrastructure Managment",
-        email: "tfschinger@student.tgm.ac.at",
+        email: "tfischinger@student.tgm.ac.at",
         imageUrl: tobiasAvatar,
     },
 ];

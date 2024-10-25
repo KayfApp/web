@@ -28,7 +28,7 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <TooltipProvider >
+                    <TooltipProvider>
                         <Header />
                         {children}
                         <Separator />

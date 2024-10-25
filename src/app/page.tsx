@@ -61,7 +61,7 @@ export default function Home() {
                                     {e.title}
                                 </Large>
                                 <div className="flex grow justify-end">
-                                    <Paragraph className="w-3/5 justify-end">{e.text}</Paragraph>
+                                    <Paragraph className="w-3/5 justify-end leading-loose">{e.text}</Paragraph>
                                 </div>
                             </div>)
                         })
@@ -73,21 +73,20 @@ export default function Home() {
                 {
                     [
                         {
-                            title: 'Note-taking and collaboration simplified', text: <>KEditor is where note-taking meets creativity in the coolest way possible! With two modes to match your flow - a sleek, polished <span className="font-bold">Writing Mode</span> for structured notes and a limitless <span className="font-bold">Canvas Mode</span> that turns your workspace into a whiteboard - your ideas can go from organized to out-of-the-box in a snap. Seamless integration between these modes means you can switch gears without missing a beat.
-                                <br />
-                                KEditor is the next-level editor and whiteboard hybrid that never tracks your data. Whether you're mapping out a masterpiece or jotting down quick thoughts, you're in complete control. <span className="font-bold">Get creative, stay organized, and do it all with total privacy—because KEditor is all about freedom, without limits.</span></>, img: editorImage
+                            title: 'Note-taking and collaboration simplified', text: <>KEditor is where note-taking meets creativity in the coolest way possible! With two modes to match your flow - a sleek, polished <span className="font-bold">Writing Mode</span> for structured notes and a limitless <span className="font-bold">Canvas Mode</span> that turns your workspace into a whiteboard - your ideas can go from organized to out-of-the-box in a snap. Seamless integration between these modes means you can switch gears without missing a beat.</>,
+                            img: editorImage
                         },
                         {
-                            title: 'Meet Tracer, the ultimate enterprise search', text: <>Tracer lets you search across multiple channels - like Email, Teams, and more—all at once. It doesn&apos;t just skim the surface; it understands your query&apos;s true meaning to deliver the most relevant results, using your data securely without ever collecting any.
+                            title: 'Meet Tracer, the ultimate enterprise search', text: <>Tracer lets you search across multiple channels - like Email, Teams, and more—all at once. It doesn&apos;t just skim the surface; it understands your query&apos;s actual meaning to deliver the most relevant results, using your data securely without ever collecting any.
                                 <br />
-                                <span className="font-bold">And here&apos;s the game-changer</span>: You can actually ask an chat bot questions directly about your data! Whether you need quick insights, detailed breakdowns, or just want to explore your information in a whole new way, the model gets you the answers instantly - no more digging through endless files and threads. It&apos;s like having a super-smart, data-savvy assistant built right in.
+                                <span className="font-bold">And here&apos;s the game-changer</span>: You can actually ask an chat bot questions directly about your data! Whether you need quick insights, or detailed breakdowns, the model gets you the answers instantly - no more digging through endless files and threads.
                             </>,
                             img: tracerImage
                         },
                         {
-                            title: 'Simplify tasks and easily automate workflows', text: <>Workflows are small, repetitive tasks in organizations that often go unautomated due to the hassle. We’ve made saving time easier by integrating popular workflow services and enhancing them with powerful AI tools!
+                            title: 'Simplify tasks and easily automate workflows', text: <>Workflows are small, repetitive tasks in organizations that often go unautomated due to the hassle. We&apos;ve made saving time easier by integrating popular workflow services and enhancing them with powerful AI tools!
                                 <br />
-                                <span className="font-bold">And here&apos;s the best part</span>: You can access data directly from the editor, allowing you to process information automatically in real-time. Plus, by integrating with hundreds of additional services, you can solve tasks more efficiently and streamline operations like never before. Whether it&apos;s automating routine steps or managing complex processes, everything becomes faster, smarter, and more effective.</>, img: workflowsImage
+                                <span className="font-bold">And here&apos;s the best part</span>: You can access data directly from the editor, allowing you to process information automatically in real-time. Plus, by integrating with hundreds of additional services, you can solve tasks more efficiently and streamline operations like never before.</>, img: workflowsImage
                         }
                     ].map((e, i) => {
                         return (
@@ -97,11 +96,11 @@ export default function Home() {
                                         (
                                             <>
                                                 <Image src={e.img} alt="Tracer demo" className="rounded-2xl w-3/5 drop-shadow-lg" />
-                                                <div>
+                                                <div className="flex flex-col self-center leading-snug">
                                                     <Heading3 className="lg:text-4xl font-normal">
                                                         {e.title}
                                                     </Heading3>
-                                                    <Paragraph>
+                                                    <Paragraph className="leading-loose">
                                                         {e.text}
                                                     </Paragraph>
                                                 </div>
@@ -110,11 +109,11 @@ export default function Home() {
                                         :
                                         (
                                             <>
-                                                <div>
+                                                <div className="flex flex-col self-center">
                                                     <Heading3 className="lg:text-4xl font-normal">
                                                         {e.title}
                                                     </Heading3>
-                                                    <Paragraph>
+                                                    <Paragraph className="leading-loose">
                                                         {e.text}
                                                     </Paragraph>
                                                 </div>

@@ -19,10 +19,10 @@ export default function Pricing() {
     return (
         <main className="flex flex-col w-screen grow items-center">
             <Section className="space-y-12">
-                <Heading1 className="text-center font-normal">
+                <Heading1 className="text-center font-normal !leading-snug">
                     <u>Highly scalable</u> tools.
                     <br />
-                    Revolutionize your workflows now.
+                    Revolutionize your data managment now.
                     <br />
                     Start <u>Free</u>!
                 </Heading1>

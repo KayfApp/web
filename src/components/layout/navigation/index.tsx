@@ -9,29 +9,29 @@ type LinkItem = {
 }
 
 export const links: LinkItem[] = [
-    {
-        label: "Products",
-        link: "/products",
-        items: [
-            {
-                label: "Tracer",
-                link: "/products/tracer",
-            },
-            {
-                label: "Workflows",
-                link: "/Products/workflows",
-            },
-            {
-                label: "KEditor",
-                link: "/products/keditor",
-
-            }
-        ]
-    },
-    {
-        label: "Download",
-        link: "/download",
-    },
+    // {
+    //     label: "Products",
+    //     link: "/products",
+    //     items: [
+    //         {
+    //             label: "Tracer",
+    //             link: "/products/tracer",
+    //         },
+    //         {
+    //             label: "Workflows",
+    //             link: "/Products/workflows",
+    //         },
+    //         {
+    //             label: "KEditor",
+    //             link: "/products/keditor",
+    //
+    //         }
+    //     ]
+    // },
+    // {
+    //     label: "Download",
+    //     link: "/download",
+    // },
     {
         label: "Pricing",
         link: "/pricing",
