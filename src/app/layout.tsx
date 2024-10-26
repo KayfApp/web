@@ -10,8 +10,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Ankush Ahuja",
-    description: "CS & AI",
+    title: "Kayf.app",
+    description: "Intelligent note taking",
 };
 
 export default function RootLayout({
