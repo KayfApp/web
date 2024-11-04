@@ -1,5 +1,4 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image, { StaticImageData } from "next/image"
 import ankushAvatar from "@/../public/about/Ankush.jpg"
 import alexAvatar from "@/../public/about/Alex.jpg"
@@ -7,7 +6,7 @@ import pavelAvatar from "@/../public/about/Pavel.jpg"
 import gioiaAvatar from "@/../public/about/Gioia.jpg"
 import tobiasAvatar from "@/../public/about/Tobias.jpg"
 import { Heading1, Paragraph } from "@/components/ui/typography"
-import Section from "@/components/layout/layout"
+import { Section, Main } from "@/components/layout"
 import Link from "next/link"
 
 interface TeamProps {
@@ -52,7 +51,7 @@ const teamList: TeamProps[] = [
 
 export default function About() {
     return (
-        <main className="flex w-screen flex-col items-center">
+        <Main>
             <Section className="space-y-10">
                 <Heading1 className="text-center">
                     <u>Building</u> tomorrow,<br /> <span className="font-normal">not reacting to it.</span>
@@ -61,7 +60,7 @@ export default function About() {
                     Our small but mighty team consists of students from the Technologisches Gewerbemuseum in Vienna, specializing in information technology. We have experts in data science, IT security, and media technologies, giving us a wide range of abilities. This variety allows us to tackle a broad range of challenges and develop innovative solutions. Together, we are committed to creating impactful technology that meets the needs of our users.
                 </Paragraph>
 
-                <div className="flex flex-row grow w-full space-x-5">
+                <div className="flex flex-row items-center space-x-5">
                     {teamList.map(
                         ({ imageUrl, name, position, email }: TeamProps) => (
                             <Card
@@ -88,6 +87,6 @@ export default function About() {
                     )}
                 </div>
             </Section>
-        </main>
+        </Main>
     )
 }

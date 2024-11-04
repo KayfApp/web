@@ -1,6 +1,6 @@
 "use client"
 
-import Section from "@/components/layout/layout";
+import { Main, Section } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Heading1, Heading2, Heading3, Large, Paragraph } from "@/components/ui/typography";
@@ -13,12 +13,13 @@ import kayfLogo from "@/../public/logo.svg"
 import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { DoubleArrowDownIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
     const { resolvedTheme } = useTheme()
     return (
-        <main className="flex w-screen flex-col grow items-center">
-            <Section className="h-screen">
+        <Main>
+            <Section className="h-screen !items-start">
                 <div className="h-full w-[65vw] flex flex-col justify-end space-y-4">
                     <Heading1 className="lg:text-7xl font-semibold">
                         Track, Access, and Process all your data on one platform.
@@ -27,6 +28,7 @@ export default function Home() {
                         Secure and open-source with Kayf.
                     </Large>
                     <Button size="lg" className="text-xl p-6 rounded-lg self-start">
+                        <DoubleArrowDownIcon className="mr-3" />
                         Learn more
                     </Button>
                 </div>
@@ -96,7 +98,7 @@ export default function Home() {
                                         (
                                             <>
                                                 <Image src={e.img} alt="Tracer demo" className="rounded-2xl w-3/5 drop-shadow-lg" />
-                                                <div className="flex flex-col self-center leading-snug">
+                                                <div className="flex flex-col self-center leading-snug w-2/5">
                                                     <Heading3 className="lg:text-4xl font-normal">
                                                         {e.title}
                                                     </Heading3>
@@ -109,7 +111,7 @@ export default function Home() {
                                         :
                                         (
                                             <>
-                                                <div className="flex flex-col self-center">
+                                                <div className="flex flex-col self-center w-2/5">
                                                     <Heading3 className="lg:text-4xl font-normal">
                                                         {e.title}
                                                     </Heading3>
@@ -128,7 +130,7 @@ export default function Home() {
             </Section>
             <Separator />
             <Section className="flex flex-row grow w-full justify-center">
-                <div className="flex flex-col w-3/5 rounded-2xl p-8 py-8 bg-accent drop-shadow-lg">
+                <div className="flex flex-col w-3/5 rounded-2xl p-8 py-8 bg-secondary drop-shadow-lg">
                     <Image src={kayfLogo} alt="logo" width={60} className={`absolute ${resolvedTheme == 'dark' ? 'invert' : ''}`} />
                     <div className="flex flex-col px-8 py-20 justify-center items-center">
                         <Heading3 className="text-center lg:text-5xl">
@@ -142,6 +144,6 @@ export default function Home() {
                     </div>
                 </div>
             </Section>
-        </main >
+        </Main>
     );
 }

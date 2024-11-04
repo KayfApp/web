@@ -1,5 +1,5 @@
-import Section from "@/components/layout/layout";
-import { Heading1 } from "@/components/ui/typography";
+import { Main, Section } from "@/components/layout";
+import { Heading1, Heading2, Paragraph } from "@/components/ui/typography";
 
 import {
     Timeline,
@@ -9,10 +9,15 @@ import {
     TimelineItem,
     TimelineLine,
 } from "@/components/ui/timeline"
+import { Separator } from "@/components/ui/separator";
+import Test from "./test.mdx"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { Drawer, DrawerContent, DrawerDescription, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
 
 export default function Blog() {
     return (
-        <main className="flex flex-row w-screen flex-col grow items-center">
+        <Main>
             <Section className="flex flex-col justify-center space-y-12">
                 <Heading1 className="text-center">
                     Progress
@@ -61,6 +66,48 @@ export default function Blog() {
                     </TimelineItem>
                 </Timeline>
             </Section>
-        </main>
+            <Separator />
+            <Section className="space-y-12">
+                <Heading2>Reports</Heading2>
+                {
+                    [{
+                        title: 'Test',
+                        description: '12',
+                        component: Test
+                    }].map((e, i) => (
+                        <Card className={`progress-report-${i}-${e.title}`}>
+                            <CardHeader>
+                                <CardTitle>
+                                    {e.title}
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent className="space-y-4">
+                                <Paragraph className="text-center">
+                                    {e.description}
+                                </Paragraph>
+                                <Drawer>
+                                    <DrawerTrigger className={buttonVariants()}>Read more</DrawerTrigger>
+                                    <DrawerContent className="flex flex-col items-center h-full">
+                                        <DrawerHeader>
+                                            <DrawerTitle className="text-3xl">
+                                                {e.title}
+                                            </DrawerTitle>
+                                            <DrawerDescription>
+                                                {e.description}
+                                            </DrawerDescription>
+                                        </DrawerHeader>
+                                        <div className="px-4">
+                                            {
+                                                <e.component />
+                                            }
+                                        </div>
+                                    </DrawerContent>
+                                </Drawer>
+                            </CardContent>
+                        </Card>
+                    ))
+                }
+            </Section>
+        </Main>
     )
 }
