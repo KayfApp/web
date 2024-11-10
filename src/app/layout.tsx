@@ -11,7 +11,7 @@ const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "Kayf.app",
-    description: "Intelligent note taking",
+    description: "Intelligent note-taking, enterprise search & automation platform",
 };
 
 export default function RootLayout({
