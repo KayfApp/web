@@ -10,10 +10,35 @@ import {
     TimelineLine,
 } from "@/components/ui/timeline"
 import { Separator } from "@/components/ui/separator";
-import Test from "./test.mdx"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Drawer, DrawerContent, DrawerDescription, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
+import R01112024 from "./01112024.mdx"
+import R15112024 from "./15112024.mdx"
+import R29112024 from "./29112024.mdx"
+
+type Blog = {
+    title: string,
+    description: string,
+    component: any
+}
+
+const blogs: Blog[] = [{
+    title: 'Progress Report: 01.11.2024',
+    description: 'Biweekly report discussing our progress',
+    component: R01112024
+},
+{
+    title: 'Progress Report: 15.11.2024',
+    description: 'Biweekly report discussing our progress',
+    component: R15112024
+},
+{
+    title: 'Progress Report: 29.11.2024',
+    description: 'Biweekly report discussing our progress',
+    component: R29112024
+}
+]
 
 export default function Blog() {
     return (
@@ -43,7 +68,7 @@ export default function Blog() {
                     </TimelineItem>
                     <TimelineItem status="done">
                         <TimelineHeading side="left">First-iteration prototype developed (8.11.2024)</TimelineHeading>
-                        <TimelineDot status="current" />
+                        <TimelineDot status="done" />
                         <TimelineLine />
                         <TimelineContent side="left">
                             The first prototype offers a basic version of the final product, showcasing simple core features as a preview of what’s to come. Its purpose is to provide an early hands-on experience with the implementation, allowing the team to evaluate progress, test functionality, and refine strategies and priorities for the next development stages. This milestone helps shape the direction of the project moving forward.
@@ -51,7 +76,7 @@ export default function Blog() {
                     </TimelineItem>
                     <TimelineItem>
                         <TimelineHeading>Feature prototypes distributed in clusters (20.12.2024)</TimelineHeading>
-                        <TimelineDot />
+                        <TimelineDot status="current" />
                         <TimelineLine />
                         <TimelineContent>
                             Building on the first prototype, we continue by focusing on advancing development by solidifying the tools, libraries, and structure of the application. Each team member finalizes their approach, resulting in a more developed version of the product. The milestone concludes with the prototype running on clustering software, ensuring scalability and laying the groundwork for handling larger workloads efficiently.
@@ -70,36 +95,34 @@ export default function Blog() {
             <Section className="space-y-12">
                 <Heading2>Reports</Heading2>
                 {
-                    [{
-                        title: 'Test',
-                        description: '12',
-                        component: Test
-                    }].map((e, i) => (
-                        <Card className={`progress-report-${i}-${e.title}`}>
+                    blogs.map((e, i) => (
+                        <Card className={`progress-report-${i}-${e.title} px-4 space-y-4`}>
                             <CardHeader>
-                                <CardTitle>
+                                <CardTitle className="text-center">
                                     {e.title}
                                 </CardTitle>
                             </CardHeader>
-                            <CardContent className="space-y-4">
-                                <Paragraph className="text-center">
-                                    {e.description}
-                                </Paragraph>
+                            <Paragraph className="text-center !mt-0">
+                                {e.description}
+                            </Paragraph>
+                            <CardContent>
                                 <Drawer>
-                                    <DrawerTrigger className={buttonVariants()}>Read more</DrawerTrigger>
+                                    <div className="flex flex-col items-center">
+                                        <DrawerTrigger className={buttonVariants()}>Read more</DrawerTrigger>
+                                    </div>
                                     <DrawerContent className="flex flex-col items-center h-full">
                                         <DrawerHeader>
-                                            <DrawerTitle className="text-3xl">
+                                            <DrawerTitle className="text-3xl text-cnter">
                                                 {e.title}
                                             </DrawerTitle>
-                                            <DrawerDescription>
+                                            <DrawerDescription className="text-center">
                                                 {e.description}
                                             </DrawerDescription>
                                         </DrawerHeader>
-                                        <div className="px-4">
-                                            {
-                                                <e.component />
-                                            }
+                                        <div className="flex flex-col items-center px-4 overflow-y-auto">
+                                            <div className="w-3/5">
+                                                {<e.component />}
+                                            </div>
                                         </div>
                                     </DrawerContent>
                                 </Drawer>
