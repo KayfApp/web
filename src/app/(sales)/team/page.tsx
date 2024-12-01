@@ -8,6 +8,7 @@ import tobiasAvatar from "@/../public/about/Tobias.jpg"
 import { Heading1, Paragraph } from "@/components/ui/typography"
 import { Section, Main } from "@/components/layout"
 import Link from "next/link"
+import teampic from "@/../public/about/Teamjpg.jpg"
 
 interface TeamProps {
     name: string;
@@ -60,32 +61,7 @@ export default function About() {
                     Our small but mighty team consists of students from the Technologisches Gewerbemuseum in Vienna, specializing in information technology. We have experts in data science, IT security, and media technologies, giving us a wide range of abilities. This variety allows us to tackle a broad range of challenges and develop innovative solutions. Together, we are committed to creating impactful technology that meets the needs of our users.
                 </Paragraph>
 
-                <div className="flex flex-row items-center space-x-5">
-                    {teamList.map(
-                        ({ imageUrl, name, position, email }: TeamProps) => (
-                            <Card
-                                key={name}
-                                className="flex flex-col bg-muted/50 relative mt-8 justify-center items-center"
-                            >
-                                <CardHeader className="mt-8 flex justify-center items-center pb-2">
-                                    <Image
-                                        src={imageUrl}
-                                        alt={`${name} ${position}`}
-                                        className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover"
-                                    />
-                                    <CardTitle className="text-center">{name}</CardTitle>
-                                    <CardDescription className="text-primary text-center">
-                                        {position}
-                                    </CardDescription>
-                                </CardHeader>
-
-                                <CardContent className="text-center pb-4">
-                                    <Link href={`mailto:${email}`} className="underline">{email}</Link>
-                                </CardContent>
-                            </Card>
-                        )
-                    )}
-                </div>
+                <Image src={teampic} alt="logo" className="rounded-2xl w-3/5 drop-shadow-lg"/>
             </Section>
         </Main>
     )
