@@ -10,7 +10,8 @@ import teampic from "@/../public/about/Teamjpg.jpg"
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import {HoverCard, HoverCardContent, HoverCardTrigger} from "@/components/ui/hover-card"
-import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTrigger} from "@/components/ui/dialog"
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTrigger} from "@/components/ui/dialog"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader } from "@/components/ui/card"
 
 interface TeamProps {
     name: string;
@@ -52,6 +53,40 @@ const teamList: TeamProps[] = [
     },
 ];
 
+const TeamCards = ({ members }: { members: TeamProps }) => (
+    <Card className="mb-8">
+        <CardHeader className="flex justify-center items-center">
+            <Avatar className="size-[100px]">
+                <Image src={members.imageUrl} alt={members.name} />
+                <AvatarFallback>{members.name}</AvatarFallback>
+            </Avatar>
+            <CardDescription>
+                {members.position}
+            </CardDescription>
+        </CardHeader>
+        <CardContent className="flex justify-center p-6">
+            <span className="grid gap-4">
+                <span className="text-3xl font-semibold">{members.name}</span>
+                <Dialog>
+                    <DialogTrigger asChild>
+                        <Button>Read more</Button>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[425px]">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, facere.
+                        Iure ea voluptates repellendus assumenda porro. Ipsam nam tempore consequuntur!
+                        Quasi praesentium nihil quisquam provident explicabo necessitatibus accusantium? Aliquid, assumenda?
+                        Itaque velit repellendus rerum incidunt perspiciatis obcaecati est eveniet earum.
+                        Distinctio fugiat perferendis ut doloremque et eos ullam, tempore pariatur.
+                    </DialogContent>
+                </Dialog>
+            </span>
+        </CardContent>
+        <CardFooter className="flex justify-center">
+            <CardDescription>{members.email}</CardDescription>
+        </CardFooter>
+    </Card>
+);
+
 export default function About() {
     return (
         <Main>
@@ -62,6 +97,7 @@ export default function About() {
                 <Paragraph className="leading-relaxed text-center">
                     Our small but mighty team consists of students from the Technologisches Gewerbemuseum in Vienna, specializing in information technology. We have experts in data science, IT security, and media technologies, giving us a wide range of abilities. This variety allows us to tackle a broad range of challenges and develop innovative solutions. Together, we are committed to creating impactful technology that meets the needs of our users.
                 </Paragraph>
+                <div className="hidden lg:block">
                 <div className="flex justify-center">
                     <Image src={teampic} alt="logo" className="rounded-2xl w-3/5 drop-shadow-lg" />
                     <HoverCard>
@@ -92,6 +128,7 @@ export default function About() {
                                             Quasi qui delectus adipisci eveniet deserunt error pariatur ipsam corrupti.
                                             Enim iste blanditiis sint temporibus, doloremque numquam molestiae! Magnam, perspiciatis!
                                         </div>
+                                        <DialogFooter><DialogDescription>{teamList[0].email}</DialogDescription></DialogFooter>
                                     </DialogContent>
                                 </Dialog>
                             </div>
@@ -125,6 +162,7 @@ export default function About() {
                                             Quasi qui delectus adipisci eveniet deserunt error pariatur ipsam corrupti.
                                             Enim iste blanditiis sint temporibus, doloremque numquam molestiae! Magnam, perspiciatis!
                                         </div>
+                                        <DialogFooter><DialogDescription>{teamList[1].email}</DialogDescription></DialogFooter>
                                     </DialogContent>
                                 </Dialog>
                             </div>
@@ -158,6 +196,7 @@ export default function About() {
                                             Quasi qui delectus adipisci eveniet deserunt error pariatur ipsam corrupti.
                                             Enim iste blanditiis sint temporibus, doloremque numquam molestiae! Magnam, perspiciatis!
                                         </div>
+                                        <DialogFooter><DialogDescription>{teamList[2].email}</DialogDescription></DialogFooter>
                                     </DialogContent>
                                 </Dialog>
                             </div>
@@ -191,6 +230,7 @@ export default function About() {
                                             Quasi qui delectus adipisci eveniet deserunt error pariatur ipsam corrupti.
                                             Enim iste blanditiis sint temporibus, doloremque numquam molestiae! Magnam, perspiciatis!
                                         </div>
+                                        <DialogFooter><DialogDescription>{teamList[3].email}</DialogDescription></DialogFooter>
                                     </DialogContent>
                                 </Dialog>
                             </div>
@@ -224,11 +264,18 @@ export default function About() {
                                             Quasi qui delectus adipisci eveniet deserunt error pariatur ipsam corrupti.
                                             Enim iste blanditiis sint temporibus, doloremque numquam molestiae! Magnam, perspiciatis!
                                         </div>
+                                        <DialogFooter><DialogDescription>{teamList[4].email}</DialogDescription></DialogFooter>
                                     </DialogContent>
                                 </Dialog>
                             </div>
                         </HoverCardContent>
                     </HoverCard>
+                </div>
+                </div>
+                <div className="lg:hidden">
+                {teamList.map((ind, index) => (
+                        <TeamCards key={index} members={ind}></TeamCards>
+                    ))}
                 </div>
             </Section>
         </Main>
