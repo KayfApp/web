@@ -6,6 +6,7 @@ import { TooltipProvider } from "@radix-ui/react-tooltip";
 import Footer from "@/components/layout/navigation/footer";
 import { Separator } from "@/components/ui/separator";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/react"
 
 const manrope = Manrope({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <Analytics />
             <body className={`${manrope.className} flex flex-col min-h-screen relative`}>
                 <ThemeProvider
                     attribute="class"
