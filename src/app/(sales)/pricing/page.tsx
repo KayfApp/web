@@ -63,20 +63,20 @@ export default function Pricing() {
                     Start <u>Free</u>!
                 </Heading1>
                 <div className="grid grid-rows-1 md:grid-cols-3 gap-12 md:gap-32">
-                    {prices.map((p, i) => (
+                    {prices.map((e, i) => (
                         <Card key={`pricing-item-${i}`} className="bg-secondary text-left">
                             <CardHeader>
-                                <CardTitle className="text-4xl">{p.abo}</CardTitle>
-                                <CardDescription>{p.description}</CardDescription>
+                                <CardTitle className="text-4xl">{e.abo}</CardTitle>
+                                <CardDescription>{e.description}</CardDescription>
                             </CardHeader>
                             <Separator />
                             <CardContent className="pt-6">
                                 <div className="pb-4 space-y-2">
-                                    <Large className="lg:text-3xl">{p.price}</Large>
-                                    <Mute>{p.priceDescriptor}</Mute>
+                                    <Large className="lg:text-3xl">{e.price}</Large>
+                                    <Mute>{e.priceDescriptor}</Mute>
                                 </div>
-                                <Button className="w-full p-6 border text-xl">{p.action}</Button>
-                                {p.features.map((f, j) => (
+                                <Button className="w-full p-6 border text-xl">{e.action}</Button>
+                                {e.features.map((f, j) => (
                                     <div key={`feature-item-${i}-${j}`} className="flex grow flex-row items-center mt-4">
                                         <Check />
                                         <Paragraph className="!mt-0 ml-2">
