@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Instagram, Linkedin, Mail } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import Link, { LinkProps } from 'next/link';
 import { Large } from '@/components/ui/typography';
@@ -22,6 +22,11 @@ const socials = [
         name: "GitHub",
         link: "https://github.com/KayfApp",
         icon: <Github className='text-secondary' />
+    },
+    {
+        name: "Instagram",
+        link: "https://www.instagram.com/kayf.app/",
+        icon: <Instagram className='text-secondary' />
     }
 ];
 
@@ -48,6 +53,7 @@ export default function Footer() {
                         return (<LinkHoverAnim key={`${i}-footer-navigation-item`} href={e.link}>{e.label}</LinkHoverAnim>)
                     })
                 }
+                <LinkHoverAnim href="/privacy">Privacy policy</LinkHoverAnim>
             </div>
             <Large className="flex self-center">
                 &copy;	2024 Kayf.app

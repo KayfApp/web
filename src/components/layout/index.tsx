@@ -6,6 +6,14 @@ export function Section({ className = '', children }: { className?: string; chil
     )
 }
 
+export function MarkdownSection({ className = '', children }: { className?: string; children?: React.ReactNode }) {
+    return (
+        <Section className={`items-stretch space-y-8 ${className}`}>
+            {children}
+        </Section>
+    )
+}
+
 export function Main({ className = '', children }: { className?: string, children?: React.ReactNode }) {
     return (
         <main className={`flex w-screen flex-col items-center ${className}`}>

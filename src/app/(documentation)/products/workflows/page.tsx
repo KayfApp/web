@@ -1,12 +1,12 @@
-import { Main, Section } from '@/components/layout'
+import { Main, MarkdownSection } from '@/components/layout'
 import Content from './content.mdx'
 
 export default function Workflows() {
     return (
         <Main>
-            <Section>
+            <MarkdownSection>
                 <Content />
-            </Section>
+            </MarkdownSection>
         </Main>
     )
 }

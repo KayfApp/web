@@ -1,7 +1,7 @@
 import { Main, MarkdownSection } from '@/components/layout'
-import Content from './content.mdx'
+import Content from './privacy.mdx'
 
-export default function KEditor() {
+export default function Privacy() {
     return (
         <Main>
             <MarkdownSection>

@@ -1,6 +1,8 @@
+import { Separator } from '@/components/ui/separator'
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { Heading1, Heading2, Heading3, Heading4, OrderedList, UnorderedList } from '@/components/ui/typography'
 import type { MDXComponents } from 'mdx/types'
+import Link from 'next/link'
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
     return {
@@ -18,6 +20,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         th: ({ children }) => <TableHead>{children}</TableHead>,
         ul: ({ children }) => <UnorderedList>{children}</UnorderedList>,
         ol: ({ children }) => <OrderedList>{children}</OrderedList>,
+        hr: () => <Separator />,
+        a: ({ href, children }) => <Link href={href || ''} className='underline'>{children}</Link>,
         ...components,
     }
 }
