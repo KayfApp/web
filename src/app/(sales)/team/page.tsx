@@ -18,7 +18,7 @@ interface TeamProps {
     name: string;
     position: string;
     email: string;
-    description: string;
+    description: string | JSX.Element;
     imageUrl: StaticImageData;
 }
 
@@ -26,36 +26,40 @@ const teamList: TeamProps[] = [
     {
         name: "Ankush Ahuja",
         position: "Project Leader & Tracer Developer",
-        email: "aahuja@student.tgm.ac.at",
-        description: "",
+        email: "contact@ahuja.app",
+        description: <>
+            Ankush, the team leader, keeps everyone on track and also works on Tracer. With sharp smarts, unbeatable charm, and a knack for solving tough challenges, he&apos;s the captain every crew dreams of.
+            <br />
+            <Link href={"https://ahuja.app"} className="underline">Ankush&apos;s Homepage</Link>
+        </>,
         imageUrl: ankushAvatar,
     },
     {
         name: "Alexander Awart",
         position: "DB & Security Managment",
         email: "aawart@student.tgm.ac.at",
-        description: "",
+        description: "Alex is our security guru and database wizard. Incredibly hardworking and always on top of his game, he's the guy who keeps everything safe and running smoothly.",
         imageUrl: alexAvatar,
     },
     {
         name: "Pavel Bakshi",
         position: "Frontend Developer",
         email: "pbakshi@student.tgm.ac.at",
-        description: "",
+        description: "Pavel is the frontend whiz who's as fast as he is creative. A frontend genius who knows his stuff, his expertise isn't limited to web - he's also skilled in data and machine learning.",
         imageUrl: pavelAvatar,
     },
     {
         name: "Gioia Frolik",
         position: "Workflows & Automation Dev",
         email: "gfrolik@student.tgm.ac.at",
-        description: "",
+        description: "Gioia is the mastermind behind workflows, automation, and documentation. From managing social media to being the go-to expert on the diploma thesis, she's the team’s all-knowing multitasking ace.",
         imageUrl: gioiaAvatar,
     },
     {
         name: "Tobias Fischinger",
         position: "Scalability & Infrastructure Managment",
         email: "tfischinger@student.tgm.ac.at",
-        description: "",
+        description: "Tobias is the old wise man of the team, specializing in scalability and serving up a constant stream of dad jokes. He's proof that wisdom and humor scale perfectly together.",
         imageUrl: tobiasAvatar,
     },
 ];

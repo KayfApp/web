@@ -6,11 +6,20 @@ export function Section({ className = '', children }: { className?: string; chil
     )
 }
 
-export function MarkdownSection({ className = '', children }: { className?: string; children?: React.ReactNode }) {
+export function MarkdownSection({ className = '', children, asChild = false }: { className?: string; children?: React.ReactNode, asChild?: boolean }) {
     return (
-        <Section className={`items-stretch space-y-8 ${className}`}>
-            {children}
-        </Section>
+        asChild ?
+            (
+                <div className={`flex flex-col items-stretch w-4/5 space-y-8 ${className}`}>
+                    {children}
+                </div>
+            )
+            :
+            (
+                <Section className={`items-stretch space-y-8 ${className}`}>
+                    {children}
+                </Section>
+            )
     )
 }
 

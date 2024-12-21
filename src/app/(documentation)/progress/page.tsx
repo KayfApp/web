@@ -1,4 +1,4 @@
-import { Main, Section } from "@/components/layout";
+import { Main, MarkdownSection, Section } from "@/components/layout";
 import { Heading1, Heading2, Paragraph } from "@/components/ui/typography";
 
 import {
@@ -119,10 +119,11 @@ export default function Blog() {
                                                 {e.description}
                                             </DrawerDescription>
                                         </DrawerHeader>
+
                                         <div className="flex flex-col items-center px-4 overflow-y-auto">
-                                            <div className="w-3/5">
+                                            <MarkdownSection className="py-0" asChild>
                                                 {<e.component />}
-                                            </div>
+                                            </MarkdownSection>
                                         </div>
                                     </DrawerContent>
                                 </Drawer>
