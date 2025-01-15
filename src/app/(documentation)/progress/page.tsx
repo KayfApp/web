@@ -16,6 +16,8 @@ import { Drawer, DrawerContent, DrawerDescription, DrawerHeader, DrawerTitle, Dr
 import R01112024 from "./01112024.mdx"
 import R15112024 from "./15112024.mdx"
 import R29112024 from "./29112024.mdx"
+import R1712024 from "./17122024.mdx"
+import R07012025 from "./07012025.mdx"
 
 type Blog = {
     title: string,
@@ -23,21 +25,32 @@ type Blog = {
     component: any
 }
 
-const blogs: Blog[] = [{
-    title: 'Progress Report: 01.11.2024',
-    description: 'Biweekly report discussing our progress',
-    component: R01112024
-},
-{
-    title: 'Progress Report: 15.11.2024',
-    description: 'Biweekly report discussing our progress',
-    component: R15112024
-},
-{
-    title: 'Progress Report: 29.11.2024',
-    description: 'Biweekly report discussing our progress',
-    component: R29112024
-}
+const blogs: Blog[] = [
+    {
+        title: 'Progress Report: 07.01.2025',
+        description: 'Biweekly report discussing our progress',
+        component: R07012025
+    },
+    {
+        title: 'Progress Report: 17.12.2024',
+        description: 'Biweekly report discussing our progress',
+        component: R1712024
+    },
+    {
+        title: 'Progress Report: 29.11.2024',
+        description: 'Biweekly report discussing our progress',
+        component: R29112024
+    },
+    {
+        title: 'Progress Report: 15.11.2024',
+        description: 'Biweekly report discussing our progress',
+        component: R15112024
+    },
+    {
+        title: 'Progress Report: 01.11.2024',
+        description: 'Biweekly report discussing our progress',
+        component: R01112024
+    },
 ]
 
 export default function Blog() {
@@ -96,7 +109,7 @@ export default function Blog() {
                 <Heading2>Reports</Heading2>
                 {
                     blogs.map((e, i) => (
-                        <Card className={`progress-report-${i}-${e.title} px-4 space-y-4`}>
+                        <Card key={`blog-card-${e.title}-${i}`} className={`progress-report-${i}-${e.title} px-4 space-y-4`}>
                             <CardHeader>
                                 <CardTitle className="text-center">
                                     {e.title}
@@ -120,7 +133,7 @@ export default function Blog() {
                                             </DrawerDescription>
                                         </DrawerHeader>
 
-                                        <div className="flex flex-col items-center px-4 overflow-y-auto">
+                                        <div className="flex flex-col items-center px-4 overflow-y-auto pb-8">
                                             <MarkdownSection className="py-0" asChild>
                                                 {<e.component />}
                                             </MarkdownSection>
