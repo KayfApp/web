@@ -1,7 +1,7 @@
 "use client"
 
 import { Main, Section } from "@/components/layout";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Heading1, Heading2, Heading3, Large, Paragraph } from "@/components/ui/typography";
 import React from "react";
@@ -14,6 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { DoubleArrowDownIcon } from "@radix-ui/react-icons";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
     const { resolvedTheme } = useTheme()
@@ -27,20 +28,19 @@ export default function Home() {
                     <Large className="lg:text-4xl font-light">
                         Secure and open-source with Kayf.
                     </Large>
-                    <Button size="lg" className="text-xl p-6 rounded-lg self-start">
+                    <Link href={'#sec-begin-content'} className={cn(buttonVariants({ variant: 'default', size: 'lg' }), 'text-xl p-6 rounded-lg self-start')}>
                         <DoubleArrowDownIcon className="mr-3" />
                         Learn more
-                    </Button>
+                    </Link>
                 </div>
             </Section>
             <Separator />
-            <Section className="flex flex-col grow justify-center text-center space-y-14">
-                <Heading2 className="text-3xl lg:text-5xl border-b-0 line leading-loose">
-                    Kayf is a <u>hyper-extendable</u> editor with scalable <br /><u>enterprise search and automation platform</u>,
-                    <br />
-                    fully tailored to your requirements.
-                    <br />
-                    <b>Powerful, private, and tracking-free.</b>
+            <Section id='sec-begin-content' className="flex flex-col grow justify-center text-center space-y-14">
+                <Heading2 className="text-3xl lg:text-5xl border-b-0 line leading-loose lg:space-y-[1em]">
+                    Kayf is a <u>all-in-one</u> <b>workspace</b>, <br />
+                    <b>automation tool</b>, and <b>search engine</b>. <br />
+                    Helping you organize, automate,<br />
+                    and find what you need <i>effortlessly</i>.<br />
                 </Heading2>
                 <div className="flex flex-col w-[90vw] text-left space-y-24">
                     {

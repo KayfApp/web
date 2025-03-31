@@ -1,6 +1,6 @@
-export function Section({ className = '', children }: { className?: string; children?: React.ReactNode }) {
+export function Section({ className = '', id, children }: { className?: string; id?: string, children?: React.ReactNode }) {
     return (
-        <section className={`flex flex-col items-center w-4/5 py-32 ${className}`}>
+        <section id={id} className={`flex flex-col items-center w-4/5 py-32 ${className}`}>
             {children}
         </section>
     )

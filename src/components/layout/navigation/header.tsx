@@ -17,19 +17,8 @@ import Image from "next/image";
 import { links } from ".";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { Large, Paragraph, Small } from "@/components/ui/typography";
-
-export function LinkHoverAnim({ children, ...props }: LinkProps & { children: React.ReactNode, className?: string }) {
-    return (
-        <Link
-            className="relative text-md w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-primary after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition after:duration-300 after:origin-center"
-            {...props}
-        >
-            {children}
-        </Link>
-    );
-}
-
+import { Large, Paragraph } from "@/components/ui/typography";
+import { LinkHoverAnim } from "@/components/ui/link";
 
 function ModeToggle() {
     const { setTheme } = useTheme()
@@ -131,7 +120,7 @@ export default function Header() {
                                 </div>
                                 <div className="flex align-items space-x-2">
                                     <Link href="https://github.com/KayfApp">
-                                        <Button className="bg-white hover:bg-white/75 text-black text-md">
+                                        <Button className="text-md">
                                             <Star className="mr-1" />
                                             Star
                                         </Button>
@@ -195,7 +184,7 @@ export default function Header() {
                     <div className="hidden lg:flex align-items space-x-4">
                         <ModeToggle />
                         <Link href="https://github.com/KayfApp">
-                            <Button className="bg-white hover:bg-white/75 text-black text-md">
+                            <Button className="text-md">
                                 <Star className="mr-1" />
                                 Star
                             </Button>

@@ -1,5 +1,5 @@
 import { Main, Section } from "@/components/layout";
-import { LinkHoverAnim } from "@/components/layout/Header";
+import { LinkHoverAnim } from "@/components/ui/link";
 import { Separator } from '@/components/ui/separator'
 import { Skeleton } from "@/components/ui/skeleton";
 import { Heading1, Heading2, Heading3, Large, Small, } from "@/components/ui/typography";

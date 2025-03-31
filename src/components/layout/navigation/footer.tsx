@@ -2,10 +2,10 @@
 
 import { Github, Instagram, Linkedin, Mail } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-import Link, { LinkProps } from 'next/link';
+import Link from 'next/link';
 import { Large } from '@/components/ui/typography';
 import { links } from '.';
-import { LinkHoverAnim } from './header';
+import { LinkHoverAnim } from '@/components/ui/link';
 
 const socials = [
     {
@@ -56,8 +56,8 @@ export default function Footer() {
                 <LinkHoverAnim href="/privacy">Privacy policy</LinkHoverAnim>
             </div>
             <Large className="flex self-center">
-                &copy;	2024 Kayf.app
+                &copy;	2025 Kayf.app
             </Large>
-        </div>
+        </div >
     );
 }
