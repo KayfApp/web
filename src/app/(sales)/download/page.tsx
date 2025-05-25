@@ -17,7 +17,7 @@ export default function Download() {
                     Download Kayf
                 </Heading1>
                 <Small className="mt-4">
-                    Lade die Web-App von Kayf für ein besseres Erlebnis herunter
+                    Download the Kayf web app for a better experience.
                 </Small>
 
                 <div className="mt-20 flex flex-col lg:flex-row space-y-20 lg:space-y-0 lg:space-x-20">
@@ -29,7 +29,7 @@ export default function Download() {
                         />
                         <div className="flex flex-col space-y-3 mt-4">
                             <Heading3>For Desktop</Heading3>
-                            <p>Nutze Kayf direkt auf deinem Desktop, um deine Workflows effizient zu verwalten und Traces lokal zu analysieren.</p>
+                            <p>Use Kayf directly on your desktop to efficiently manage your workflows and analyze traces locally.</p>
                             <LinkHoverAnim href={"#"}>Download for Windows</LinkHoverAnim>
                             <LinkHoverAnim href={"#"}>Download for Linux</LinkHoverAnim>
                         </div>
@@ -43,7 +43,7 @@ export default function Download() {
                         />
                         <div className="flex flex-col space-y-3 mt-4">
                             <Heading3>For Mobile</Heading3>
-                            <p>Bleibe auch unterwegs mit Kayf verbunden. Tracer überwachen, Workflows starten oder den Status prüfen – jederzeit verfügbar.</p>
+                            <p>Stay connected with Kayf on the go. Monitor tracers, start workflows, or check statuses – available anytime.</p>
                             <LinkHoverAnim href={"#"}>Download for iOS</LinkHoverAnim>
                             <LinkHoverAnim href={"#"}>Download for Android</LinkHoverAnim>
                         </div>
@@ -64,7 +64,7 @@ export default function Download() {
                         <Skeleton className="h-[400px] w-full md:h-[600px] rounded-xl" />
                         <div className="flex flex-col space-y-3 mt-4">
                             <Heading3>Docker Image</Heading3>
-                            <p>Starte Tracer sofort mit dem vorkonfigurierten Docker Image – perfekt für schnelle Tests und CI/CD-Umgebungen.</p>
+                            <p>Start tracers instantly with the preconfigured Docker image – perfect for quick tests and CI/CD environments.</p>
                             <LinkHoverAnim href={"#"}>From GitHub</LinkHoverAnim>
                             <LinkHoverAnim href={"#"}>From Docker Hub</LinkHoverAnim>
                         </div>
@@ -74,7 +74,7 @@ export default function Download() {
                         <Skeleton className="h-[400px] w-full md:h-[600px] rounded-xl" />
                         <div className="flex flex-col space-y-3 mt-4">
                             <Heading3>Source Code</Heading3>
-                            <p>Greife auf den Quellcode von Tracer zu – für volle Kontrolle, individuelle Anpassungen und Community-Entwicklung.</p>
+                            <p>Access the source code of Tracer – for full control, custom modifications, and community-driven development.</p>
                             <LinkHoverAnim href={"#"}>Get Latest Stable Release</LinkHoverAnim>
                             <LinkHoverAnim href={"#"}>Get Latest Development Version</LinkHoverAnim>
                         </div>
